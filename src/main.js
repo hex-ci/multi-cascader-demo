@@ -9,7 +9,7 @@ Vue.use(Checkbox);
 
 import 'element-ui/lib/theme-chalk/index.css';
 
-import MultiCascaderDemo from './component.vue';
+import MultiCascaderDemo from './Component.vue';
 
 Vue.component('MultiCascaderDemo', MultiCascaderDemo);
 
