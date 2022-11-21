@@ -20,7 +20,7 @@ export const on = (function() {
 })();
 
 const nodeList = [];
-const ctx = '@@clickoutsideContext';
+const ctx = '@@clickOutsideContext';
 
 let startClick;
 let seed = 0;
@@ -54,14 +54,6 @@ function createDocumentHandler(el, binding, vnode) {
   };
 }
 
-/**
- * v-clickoutside
- * @desc 点击元素外面才会触发的事件
- * @example
- * ```vue
- * <div v-element-clickoutside="handleClose">
- * ```
- */
 export default {
   bind(el, binding, vnode) {
     nodeList.push(el);
@@ -81,7 +73,7 @@ export default {
   },
 
   unbind(el) {
-    let len = nodeList.length;
+    const len = nodeList.length;
 
     for (let i = 0; i < len; i++) {
       if (nodeList[i][ctx].id === el[ctx].id) {
